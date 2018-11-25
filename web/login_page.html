@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="logincss.css">
-        <script src="loginjs.js"></script>
-        <style>
-            button{
-                 background-color: lightcoral;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-            }
-        </style>
-    </head>
-    <body>
-        <form action="login.jsp">
-        <div class="container">
-                <label for="uname"><b>email</b></label>
-      <input type="text" placeholder="Enter Email" name="uname" required>
+<html lang="en" >
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-            </div>
-            </form>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+
+      <link rel="stylesheet" href="style.css">
+      <style>
+          body{
+              background:url(bg1.jpg) no-repeat center;
+              background-color: lightgrey;
+               background-size: 525px 680px;
+          }
+      </style>
+  
+</head>
+<body>
+
+  <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+                            <form action="loginServlet" method="post">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" name="username" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" name="password" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+                                </form>
+			</div>
+		</div>
+	</div>
+</div>
+  
+  
+
+</body>
+
 </html>
