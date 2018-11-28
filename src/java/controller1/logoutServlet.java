@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller1;
 
 import java.io.IOException;
@@ -33,11 +28,14 @@ public class logoutServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
              request.getRequestDispatcher("home.jsp").include(request, response);  
-              
-            HttpSession session=request.getSession();  
-            session.invalidate();  
+              response.setHeader("Cache-control","no-cache,no-store,must-revalidate");
+               response.setHeader("Cache-control","no-cache,no-store,must-revalidate");
+            response.addHeader("Cache-Control","post-check=0,pre-check=0");
+            response.setHeader("pragma","no-cache");
+            response.setDateHeader("Expires", 0);
+              HttpSession session=request.getSession(false);  
+            session.invalidate();
             response.sendRedirect("home.jsp");
-              
             out.close();
         }
     }

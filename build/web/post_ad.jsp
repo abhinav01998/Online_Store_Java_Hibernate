@@ -19,6 +19,13 @@
             .subm{
                 align-content:center;
             }
+            input[type=text],input[type=number],input[type=email],input[type=file]{
+                border-radius: 7px;
+            }
+            .selc,.op{
+                border-radius: 7px;
+                padding:5px 10px;
+            }
         </style>
     </head>
     <body>
@@ -27,8 +34,8 @@
                 <form action="AdServlet" method="post" enctype="multipart/form-data">
                 <table>
             <tr> <td><h3>Category: </h3></td>
-                <td> <select name="category" required>
-                <option>Cars</option>
+                <td> <select name="category" class="selc" required>
+                <option class="op">Cars</option>
                 <option>Bikes</option>
                 <option>Mobiles</option>
                 <option>Furniture</option>
@@ -45,6 +52,9 @@
             <tr><td><h3>Choose Image for your Product: </h3></td>
                     
                 <td><input type="file" name="upload" id="upload"></td></tr>
+            
+            <tr><td><h3>Product Price: </h3></td>
+                <td><input type="number" name="price" required></td></tr>
             
             <tr><td><h3>Seller Name: </h3></td>
                 <td><input type="text" name="seller" required></td></tr>

@@ -76,21 +76,37 @@ $('.carousel .item').each(function(){
             .b{
                 background-color: lightgrey;
                 float: left;
+                top: 0;
                 z-index: 1;
                 left: 0;
                 overflow-x: hidden;
-                padding-bottom: 70%;
+                overflow-y: hidden;
+                height: 40vh;
+                padding-bottom: 38%;
             }
             .c{
                 background-color: lightgrey;
                 float: left;
+                 margin-right: 20px;
+                margin-left: 20px;
+            }
+            .d{
+                overflow-y: scroll;
+                height: 80vh; 
             }
             .e{
                 float: right;
-                width: 80%;
+                width: 100%;
+            }
+            .g{
+                float: right;
+                width: 100%;
             }
             .b a{
                 display: block;
+            }
+            #sli{
+                margin-left: 0px;
             }
             ul {
     list-style-type: none;
@@ -214,7 +230,9 @@ input[type=text], input[type=password], input[type=email] {
     color: red;
     cursor: pointer;
 }
-
+#slider{
+    background-color: transparent;
+}
       </style>
     </head>
     <body>
@@ -274,8 +292,7 @@ home.jsp
 </form>
 
                 </div>
-            </div>
-        <button class="ad" style="width:auto;float:right;padding: 7px;"><a href="post_ad.jsp"> post your free ad</a></button>
+        </div>
                 </div>
         <p> </p>
         <div class = "b">
@@ -283,251 +300,162 @@ home.jsp
                 <li><a href="sub_webpages/furniture.jsp">Furniture</a></li>
                 <li><a href="sub_webpages/Appliances.jsp">Appliances</a></li>
                 <li><a href="sub_webpages/cars.jsp">Cars</a></li>
-                <li><a href="sub_webpages/services.jsp">Services</a></li>
-                <li><a href="sub_webpages/jobs.jsp">Jobs</a></li>
                 <li><a href="sub_webpages/homes.jsp">Homes</a></li>
                 <li><a href="sub_webpages/bikes.jsp">Bikes</a></li>
                 <li><a href="sub_webpages/mobiles.jsp">Mobiles</a></li>
-                <li><a href="sub_webpages/toys.jsp">Toys</a></li>
-                <li><a href="sub_webpages/fashion.jsp">Fashion</a></li>
-                <li><a href="sub_webpages/pets.jsp">Pets</a></li>
             </ul>
         </div>
         <div class="d" style="align-content:right">
         <div class="c">
             <h2> Cars </h2>
             <ul>
-                <li><a href="used cars">Used Cars</a></li>
-                <li><a href="new cars">New Cars</a></li>
-                <li><a href="bikes">Bikes</a></li>
-                <li><a href="vehicles">Commercial Vehicles</a></li>
-                <li><a href="#insurance">Car Insurance</a></li>
+                <li><a href="sub_webpages/cars.jsp">Used Cars</a></li>
+                <li><a href="sub_webpages/new_cars.jsp">New Cars</a></li>
+                <li><a href="sub_webpages/bikes.jsp">Bikes</a></li>
+                <li><a href="sub_webpages/scooters.jsp">Scooters</a>
+                <li><a href="sub_webpages/vehicles.jsp">Commercial Vehicles</a></li>
             </ul>
         </div>
         <div class="c">
             <h2>    Bikes    </h2>
             <ul>
-            <li><a href="new bikes">New Bikes</a></li>
-                <li><a href="used bikes">Used Bikes</a></li>
-                <li><a href="use scooters">Used scooters</a></li>
-                <li><a href="certifies bikes">Certified bikes</a></li>
-                <li><a href="#insurance">Bike Insurance</a></li>
+            <li><a href="sub_webpages/bikes.jsp">Bikes</a></li>
+                <li><a href="sub_webpages/scooters.jsp">Scooters</a></li>
+                <li><a href="sub_webpages/cars.jsp">Used Cars</a></li>
+                <li><a href="sub_webpages/new_cars.jsp">New Cars</a>
+                <li><a href="sub_webpages/vehicles.jsp">Commercial Vehicles</a></li>
             </ul>
         </div>
         <div class="c">
             <h2>    Homes   </h2>
             <ul>
-            <li><a href="Men-PG">PGs for Men</a></li>
-                <li><a href="Women-PG">PGs for Women</a></li>
-                <li><a href="shared">Shared Rooms</a></li>
-                <li><a href="certified">Certified Rooms</a></li>
-                <li><a href="house">Houses</a></li>
+            <li><a href="sub_webpages/homes.jsp#men_pg">PGs for Men</a></li>
+                <li><a href="sub_webpages/homes.jsp#women_g">PGs for Women</a></li>
+                <li><a href="sub_webpages/homes.jsp#shared">Shared Rooms</a></li>
+                <li><a href="sub_webpages/homes.jsp#certified">Certified Rooms</a></li>
+                <li><a href="sub_webpages/homes.jsp">Houses</a></li>
             </ul>
         </div>
         <div class="c">
             <h2>    Bazaar    </h2>
             <ul>
-            <li><a href="#Furniture">Furniture</a></li>
-                <li><a href="#decor">Decor</a></li>
-                <li><a href="#Electronics">Electronics</a></li>
-                <li><a href="#Mobiles">Mobiles</a></li>
-                <li><a href="#appliances">Appliances</a></li>
+            <li><a href="sub_webpages/Furniture.jsp">Furniture</a></li>
+                <li><a href="sub_webpages/decor.jsp">Decor</a></li>
+                <li><a href="sub_webpages/Electronics.jsp">Electronics</a></li>
+                <li><a href=sub_webpages/"Mobiles.jsp">Mobiles</a></li>
+                <li><a href="sub_webpages/appliances.jsp">Appliances</a></li>
             </ul>
         </div>
-        <div class="c">
-            <h2>    Entertainment   </h2>
-            <ul>
-            <li><a href="roles">acting</a></li>
-                <li><a href="#gossip">Gossips</a></li>
-                <li><a href="agency">Modeling agency</a></li>
-                <li><a href="#photography">Photography</a></li>
-                <li><a href="#makeup">MakeUp</a></li>
-            </ul>
         </div>
             <hr>
-            <div class="e">
-                <div id="myCarouselWrapper" class="container-fluid">
+            <div class="g" style="align-content:right">
+                <h2 style="margin-left: 150px"> Latest cars: </h2>
+    <div class="container">
+        <div class="row" >
+            <div class="col-xs-12" >
 
-    	 <div id="myCarousel" class="carousel slide">
+                <div id="imageCarousel" class="carousel slide" data-interval="2000"
+                     data-ride="carousel" data-pause="hover" data-wrap="true">
 
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car1.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car2.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car3.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/cra4.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car1.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car2.jpg" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car3.jpg" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/cra4.jpg" class="img-responsive"></a></div>
-    </div>
-  </div>
+                    <ol class="carousel-indicators" >
+                        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#imageCarousel" data-slide-to="1"></li>
+                        <li data-target="#imageCarousel" data-slide-to="2"></li>
+                    </ol>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>   
+                    <div class="carousel-inner">
+                        <div class="item active" id="slider">
+                            <div class="row">
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/Energica.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Energica_ego</h3>
+                                        <p>It is an electric bike, new to the bike market</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4"id="sli">
+                                    <img src="Images/ducati_1198.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Ducati 1198</h3>
+                                        <p>Ducati 1198 is a superbike made by famous brand Ducati.</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/tesla_model_m_concept.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Tesla Model M concept</h3>
+                                        <p>A concept bike by Tesla motors that is yet to be tested, a bike of future.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" id="slider">
+                            <div class="row">
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/yamaha_xvs_1300.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Yamaha XVS 1300</h3>
+                                        <p>A superbike by Yamaha motors using the latest bike design technology</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/ninja.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Kawasaki Ninja ZX 6R</h3>
+                                        <p> Ninja ZX 6R is a bike made by Kawasaki and is a famous bike in the world of racing</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/darkb.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Suzuki Dark Bike</h3>
+                                        <p>This Suzuki bike has nice looks as well as nice speed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-</div>
+                        <div class="item" id="slider">
+                            <div class="row">
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/buell.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>Buell Ligtning XB12 SCG</h3>
+                                        <p>This superbike is a powerful BEAST made by Buell motors</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/ktm.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>KTM RC8</h3>
+                                        <p>RC8 is an extremely speedy superbike by KTM and is quite popular</p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4" id="sli">
+                                    <img src="Images/Hayabusa.jpg" class="img-responsive">
+                                    <div class="carousel-caption">
+                                        <h3>SUZUKI HAYABUSA</h3>
+                                        <p>Hayabusa is a very powerful bike by suzuki, this one is in orange color</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a href="#imageCarousel" class="carousel-control right" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
             </div>
-            <hr>
-            <div class="e">
-                <div id="myCarouselWrapper" class="container-fluid">
-
-    	 <div id="myCarousel" class="carousel slide">
-
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car2.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/CCCCCC&text=2" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=5" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=7" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=8" class="img-responsive"></a></div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>   
-
-</div>
-            </div>
-            <hr>
-            <div class="e">
-                <div id="myCarouselWrapper" class="container-fluid">
-
-    	 <div id="myCarousel" class="carousel slide">
-
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/car3.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/CCCCCC&text=2" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=5" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=7" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=8" class="img-responsive"></a></div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>   
-
-</div>
-            </div>
-            <hr>
-            <div class="e">
-                <div id="myCarouselWrapper" class="container-fluid">
-
-    	 <div id="myCarousel" class="carousel slide">
-
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="Images/cra4.jpg" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/CCCCCC&text=2" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/eeeeee&text=3" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f4f4f4&text=4" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/fcfcfc/333&text=5" class="img-responsive"></a></div>
-    </div>
-    <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=6" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=7" class="img-responsive"></a></div>
-    </div>
-     <div class="item">
-      <div class="item-item col-md-3 col-sm-4"><a href="#"><img src="http://placehold.it/500/f477f4/fff&text=8" class="img-responsive"></a></div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>   
-
-</div>
-            </div>
+        </div>
+    </div>     
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
         </div>
     </body>
 </html>

@@ -51,10 +51,10 @@ li a:hover:not(.active) {
         <div></div>
         <div>
             <ul>
-                <li class="active"><a href="used cars">Used Cars</a></li>
-                <li><a href="new cars">New Cars</a></li>
-                <li><a href="bikes">Bikes</a></li>
-                <li><a href="vehicles">Commercial Vehicles</a></li>
+                <li><a href="cars.jsp">Used Cars</a></li>
+                <li><a href="new_cars.jsp">New Cars</a></li>
+                <li><a href="bikes.jsp">Bikes</a></li>
+                <li class="active"><a href="vehicles.jsp">Commercial Vehicles</a></li>
 
             </ul>
         </div>

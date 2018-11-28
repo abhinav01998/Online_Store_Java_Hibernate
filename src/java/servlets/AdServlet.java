@@ -29,7 +29,7 @@ public class AdServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String url="jdbc:mysql://localhost:3306/java_project?useSSL=false&verifyServerCertificate=false&allowMultiQueries=true";
+        String url="jdbc:mysql://localhost:3306/java_project?useSSL=false&allowPublicKeyRetrieval=true&verifyServerCertificate=false&allowMultiQueries=true";
         PrintWriter out = response.getWriter();
         int result =0;
         Connection conn = null;
@@ -39,7 +39,7 @@ public class AdServlet extends HttpServlet {
             try{
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection(url,"root","Abhi123@");
-                PreparedStatement ps = conn.prepareStatement("insert into addata values(?,?,?,?,?,?)" );
+                PreparedStatement ps = conn.prepareStatement("insert into addata values(?,?,?,?,?,?,?)" );
                 InputStream is = part.getInputStream();
                 ps.setString(1,request.getParameter("category"));
                 ps.setString(2,request.getParameter("product"));
@@ -47,13 +47,13 @@ public class AdServlet extends HttpServlet {
                 ps.setString(4,request.getParameter("seller"));
                 ps.setString(5,request.getParameter("contact"));
                 ps.setString(6,request.getParameter("email"));
-                
+                ps.setString(7,request.getParameter("price"));
                 result = ps.executeUpdate();
                 if(result > 0)
                 {
                     //String s = (String)request.getAttribute("fileselect");
                     //request.setAttribute("fileselect",s);
-                   response.sendRedirect("home.jsp");
+                   response.sendRedirect("home1.jsp");
                     //rd.forward(request,response);
                 }
                 

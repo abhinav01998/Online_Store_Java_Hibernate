@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Mobiles</title>
          <style>
             div{
                background-color: lightgrey;
@@ -44,17 +44,23 @@ li a:hover:not(.active) {
 .dropdown-content{
     
 }
+.a{
+    background-color: lightgrey;
+               padding: 20px;
+               margin-top: 1px;
+                overflow: hidden;
+    width: 100%;
+}
         </style>
     </head>
     <body>
-        <div></div>
-        <div>
+        <div class="a">
+            
+        </div>
+        <div class="b">
             <ul>
-                <li class="active"><a href="used cars">Used Cars</a></li>
-                <li><a href="new cars">New Cars</a></li>
-                <li><a href="bikes">Bikes</a></li>
-                <li><a href="vehicles">Commercial Vehicles</a></li>
-                
+                <li class="active"><a href="mobiles.jsp">Used Mobiles</a></li>
+                <li><a href="new_mobiles.jsp">New Mobiles</a></li>
             </ul>
         </div>
     </body>

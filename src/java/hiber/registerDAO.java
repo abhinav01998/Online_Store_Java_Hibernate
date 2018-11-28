@@ -1,10 +1,6 @@
 package hiber;
 
-import static java.lang.System.out;
-import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -28,7 +24,7 @@ public class registerDAO {
             s.close();
             sf.close();
             return true;
-         }catch(Exception e){
+         }catch(HibernateException e){
              return false;
          }
     }
