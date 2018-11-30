@@ -133,7 +133,7 @@ public final class cars_jsp extends org.apache.jasper.runtime.HttpJspBase
         while(rs.next()){
                Blob blob = rs.getBlob(3);
                byte byteArray[] = blob.getBytes(1,(int)blob.length());
-             fout=new FileOutputStream("C:/Users/Abhinav Thakur/Documents/NetBeansProjects/WebApp_Project/web/sub_webpages/outimg/"+i+".jpg"); 
+             fout=new FileOutputStream("C:/Users/Abhinav Thakur/Documents/NetBeansProjects/WebApp_Project/web/sub_webpages/outimg/its"+i+".jpg"); 
              fout.write(byteArray); 
               String ref = rs.getString(2);
               
@@ -148,9 +148,11 @@ public final class cars_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </tr>\n");
       out.write("                <tr>\n");
       out.write("                    <td><h4>");
-System.out.print(ref);
+out.print(ref);
       out.write("</h4></td>\n");
-      out.write("                    <td><button type=\"submit\" name=\"check\" value=j>Buy</button></td>\n");
+      out.write("                    <td><button type=\"submit\" name=\"check\" value=");
+      out.print(j);
+      out.write(">Buy</button></td>\n");
       out.write("                </tr>\n");
       out.write("            </table>\n");
       out.write("        </div>\n");

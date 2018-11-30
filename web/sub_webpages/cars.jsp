@@ -85,9 +85,10 @@ li a:hover:not(.active) {
         while(rs.next()){
                Blob blob = rs.getBlob(3);
                byte byteArray[] = blob.getBytes(1,(int)blob.length());
-             fout=new FileOutputStream("C:/Users/Abhinav Thakur/Documents/NetBeansProjects/WebApp_Project/web/sub_webpages/outimg/"+i+".jpg"); 
+             fout=new FileOutputStream("C:/Users/Abhinav Thakur/Documents/NetBeansProjects/WebApp_Project/web/sub_webpages/outimg/its"+i+".jpg"); 
              fout.write(byteArray); 
               String ref = rs.getString(2);
+              String price = rs.getString(7);
               %>
               <form action="billing.jsp">
         <div class="c">
@@ -96,8 +97,11 @@ li a:hover:not(.active) {
                     <td><img src=<%="outimg/its"+i+".jpg" %>  style="width:200px;height:200px;" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 </tr>
                 <tr>
-                    <td><h4><%System.out.print(ref);%></h4></td>
-                    <td><button type="submit" name="check" value=j>Buy</button></td>
+                    <td><h4><%out.print(ref);%></h4></td>
+                    <td><button type="submit" name="check" value=<%=j%>>Buy</button></td>
+                </tr>
+                <tr>
+                    <td><h4>Seller Price: Rs. <%out.print(price);%></h4></td>
                 </tr>
             </table>
         </div>
