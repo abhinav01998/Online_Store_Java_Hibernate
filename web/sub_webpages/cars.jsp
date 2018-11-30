@@ -50,13 +50,15 @@ li a:hover:not(.active) {
 .active {
     background-color: #4CAF50;
 }
-.dropdown-content{
-    
+.c{
+    float: left;
+    padding: 20px 30px;
+    border: 1px solid black;
 }
         </style>
     </head>
     <body>
-        <div></div>
+        <button style="float: right;display: block;"><a href="C:\Users\Abhinav Thakur\Documents\NetBeansProjects\WebApp_Project\web\home1.jsp">Home</a></button>
         <div>
             <ul>
                 <li class="active"><a href="cars.jsp">Used Cars</a></li>
@@ -77,22 +79,29 @@ li a:hover:not(.active) {
         ps.setString(1,"Cars");
         ResultSet rs = ps.executeQuery();
         //OutputStream os =response.getOutputStream();
-        FileOutputStream fout= null;
+        FileOutputStream fout = null;
         int i=1;
+        int j=22;
         while(rs.next()){
                Blob blob = rs.getBlob(3);
                byte byteArray[] = blob.getBytes(1,(int)blob.length());
-              fout=new FileOutputStream("car"+i+".jpg");  
-              fout.write(byteArray); 
+             fout=new FileOutputStream("C:/Users/Abhinav Thakur/Documents/NetBeansProjects/WebApp_Project/web/sub_webpages/outimg/"+i+".jpg"); 
+             fout.write(byteArray); 
               String ref = rs.getString(2);
               %>
-              <table style="float:left;">
-                  <tr><td>
-                          <img src=<%="car"+i+".jpg" %>  style="width:200px;height:200px;" >&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
-                  <tr><td style="text-align: center;font-size: 150%;font-weight: bold;">        
-                          <form action="billing.jsp" method="post"> <input type="submit" style="background:none;color:inherit;border:none;padding:0;font: inherit;cursor: pointer;" value=" <%= rs.getString(2) %> "></td></tr>
-              </table>                                                                         <input type="hidden" name= "product" value= "<%=""+ref+""%>" > </form>
-         
+              <form action="billing.jsp">
+        <div class="c">
+            <table>
+                <tr>
+                    <td><img src=<%="outimg/its"+i+".jpg" %>  style="width:200px;height:200px;" >&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><h4><%System.out.print(ref);%></h4></td>
+                    <td><button type="submit" name="check" value=j>Buy</button></td>
+                </tr>
+            </table>
+        </div>
+              </form>
         <%
             //session.setAttribute("userId"+i+"", ref);
             System.out.print(ref);
@@ -100,6 +109,7 @@ li a:hover:not(.active) {
             //String s = rs.getString(2);
             //session.setAttribute("product",s);
               i++;
+              j++;
             }
         fout.close();
           }
@@ -108,8 +118,6 @@ li a:hover:not(.active) {
          }
         %>
         </div>
-        <div class="footer">
-          <hr> <p><h2 style="color:#f3c500;display:inline;">QUICK</h2><h2 style="color:#01a185;display:inline;">SELL</h2><br><br>Â© 2018 QuickSell. All Rights Reserved</p>
-        </div>
+        
     </body>
 </html>
